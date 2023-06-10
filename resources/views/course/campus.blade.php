@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-        <img  style ="width:300px; height:128px;" src="dist/img/logo2.png" ></img>
+        <img  style ="width:300px; height:128px;" src="dist/img/sadmPic2.png" ></img>
         <br></br>
         <h3 style="color:blue">Professional Certificates</h3>
        <br>

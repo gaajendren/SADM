@@ -20,14 +20,14 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="dist/img/sadmPic2.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        
+
                    
                     </ul>
                 </div>
@@ -36,7 +36,7 @@
         <!-- Masthead-->
         <header class="masthead" style="background-image: url('dist/img/sadmPic.jpg'); height:100vh;"> 
             <div class="container">
-                <div class="masthead-subheading">Welcome to Eco Hauage</div>
+                <div class="masthead-subheading">Welcome to Eco Haulage</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="login">Login</a>
                 <a class="btn btn-primary btn-xl text-uppercase" href="register">Register</a>

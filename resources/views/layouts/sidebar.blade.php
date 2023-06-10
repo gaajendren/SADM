@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style = "position:fixed; height: 100%"  >
 
 <a href="/home" class="brand-link">
-      <img src="../../dist/img/navbar-logo.svg.png" alt="AdminLTE Logo" class="brand-image " style="position:fixed;">
+      <img src="../../dist/img/sadmPic2.png" alt="AdminLTE Logo" class="brand-image " style="position:fixed;">
       <br>
     </a>
   
