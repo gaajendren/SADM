@@ -36,7 +36,7 @@
         <!-- Masthead-->
         <header class="masthead" style="background-image: url('dist/img/backgroundlegoomcircle.jpg'); height:100vh;"> 
             <div class="container">
-                <div class="masthead-subheading">Welcome To Legoom Circle!</div>
+                <div class="masthead-subheading">HI</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="login">Login</a>
                 <a class="btn btn-primary btn-xl text-uppercase" href="register">Register</a>
