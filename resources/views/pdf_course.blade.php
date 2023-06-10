@@ -7,8 +7,10 @@
  
   <style>
     @page {
-      size: A2;
+      size: A4;
       margin: 10mm;
+      width: 21.6cm;
+      height:27.9cm;
     }
     
     table {
@@ -16,16 +18,19 @@
       border-collapse: collapse;
       table-layout: fixed;
       width: 100%;
+      font-size: 8px;
     }
     
     th, td {
       border: 1px solid black;
       padding: 8px;
       text-align: center;
+      font-size: 8px;
     }
     
     th {
       background-color: #f2f2f2;
+      font-size: 8px;
     }
     
   </style>
