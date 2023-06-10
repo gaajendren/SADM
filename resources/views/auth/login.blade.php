@@ -1,4 +1,4 @@
-<@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
