@@ -105,6 +105,33 @@
            </li>
            </li>
            <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="nav-icon fa-solid fa-book"></i>
+              <p>
+                Export
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">3</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item" style = "position:relative; left:15px;">
+                <a href="{{ url('/course') }}" class="nav-link">
+                <i class="nav-icon fa-solid fa-list"></i>
+                  <p>List</p>
+                </a>
+              </li>
+              <li class="nav-item" style = "position:relative; left:15px;">
+                <a href="{{ url('/course/create') }}" class="nav-link">
+                <i class="nav-icon fa-solid fa-circle-plus"></i>
+                  <p>Create</p>
+                </a>
+              </li>
+             
+              
+            </ul>
+           </li>
+           </li>
+           <li class="nav-item">
                 <a href="{{ url('/campus') }}" class="nav-link">
                 <i class="nav-icon fa-solid fa-list"></i>
                   <p>Campus</p>
