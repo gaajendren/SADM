@@ -35,7 +35,8 @@
                 <div class="card">
                     <div class="card-header">Schedule</div>
                     <div class="card-body">
-                        <a href="{{ url('/driver/1/schedules/create') }}" class="btn btn-success btn-sm" title="Add New Course">
+                    <a href="{{ url('/driver/' . $driver->id . '/schedules/create') }}" class="btn btn-success btn-sm" title="Add New Course">
+
                        
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
