@@ -119,7 +119,7 @@ class CourseController extends Controller
          $input = $request->all();
         $course = Course::find($id);
        
-       
+        
         $course->update($input);
         
         return redirect('course')->with('flash_message', 'Courses Updated!');  

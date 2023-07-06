@@ -18,30 +18,6 @@ class ScheduleController extends Controller
     return view('schedules.index', compact('driver'));
 }
 
-public function calendar($driverId)
-{
-    $driver = DriversTimetable::findOrFail($driverId);
-
-    $schedules = Schedule::where('driver_id', $driver->id)->get();
-
-    $events = [];
-    foreach ($schedules as $schedule) {
-        // Combine date and time into a single start property in ISO format
-        $start = Carbon::parse("{$schedule->date} {$schedule->start_time}")->toIso8601String();
-
-        // Combine date and time into a single end property in ISO format
-        $end = Carbon::parse("{$schedule->date} {$schedule->end_time}")->toIso8601String();
-
-        $events[] = [
-            'id' => $schedule->id, // Include a unique event ID (required by DayPilot)
-            'text' => "Driver {$schedule->driver_id}",
-            'start' => $start,
-            'end' => $end,
-        ];
-    }
-
-    return view('schedules.calendar', compact('driver', 'events'));
-}
 
 
 
@@ -52,8 +28,9 @@ public function calendar($driverId)
     return view('schedules.create', compact('driver'));
 }
 
-public function store(Request $request, $driverId)
+public function store(Request $request )
 {
+    $driverId = $request->input('driverid');
     $driver = DriversTimetable::findOrFail($driverId);
 
     $request->validate([
@@ -106,37 +83,36 @@ public function edit($driverId, $scheduleId)
     $driver = DriversTimetable::findOrFail($driverId);
     $schedule = Schedule::findOrFail($scheduleId);
 
-    return view('schedules.edit', compact('driver', 'schedule'));
+    return view('schedules.edit', compact('schedule'))->with('schedule', $schedule);
 }
 
-public function update(Request $request, $driverId, $scheduleId)
-{
-    $driver = DriversTimetable::findOrFail($driverId);
+
+
+public function update(Request $request, $scheduleId)
+{ 
+    $input = $request->all();
     $schedule = Schedule::findOrFail($scheduleId);
+    
+   
+    $schedule->update($input);
+   
 
-    $request->validate([
-        'date' => 'required|date',
-        'start_time' => 'required|date_format:H:i',
-        'end_time' => 'required|date_format:H:i',
-        // Add validation for other schedule fields as needed
-    ]);
-
-    $schedule->date = $request->input('date', 'start_time' , 'end_time');
-    // Update other schedule fields as needed
-    $schedule->save();
-
-    return redirect()->route('schedules.index', $driver->id)
+    return redirect('driver')
         ->with('success', 'Schedule updated successfully.');
 }
 
-public function destroy($driverId, $scheduleId)
+
+
+public function destroy( $scheduleId)
 {
-    $driver = DriversTimetable::findOrFail($driverId);
+    
     $schedule = Schedule::findOrFail($scheduleId);
+    $driverId =  $schedule->driver_id;
     $schedule->delete();
 
-    return redirect()->route('schedules.index', $driver->id)
+    return redirect()->route('driver.index', $driverId)
         ->with('success', 'Schedule deleted successfully.');
+       
 }
 
 }

@@ -37,7 +37,8 @@ class export extends Model
         'depot_date',
         'send_date',
         'back_date',
-        'trailer'
+        'trailer',
+        'status'
     ];
 
   

@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Course</h1>
+          <h1 class="m-0">Export</h1>
         </div><!-- /.col -->
         <div class="col-sm-10">
           <ol class="breadcrumb float-sm-right">
@@ -29,7 +29,7 @@
   <!-- /.content-header -->
   <div class="container" style= "margin: left 50;">
 <div class="card">
-  <div class="card-header">Course Page
+  <div class="card-header">Export Page
   <span class="float-right">
                     <a class="btn btn-primary" href="{{ route('exports.index') }}">Back</a>
                 </span>
@@ -95,7 +95,14 @@
     <label for="trailer">Trailer</label><br>
     <input type="text" name="trailer" id="trailer" class="form-control"><br>
 
-    
+    <div class="form-group">
+    <label for="status">Status:</label>
+    <select class="form-control" id="status" name="status">
+        <option value="Pending" >Pending</option>
+        <option value="On the Way" >On the Way</option>
+        <option value="Delivered" >Delivered</option>
+    </select>
+</div>
         <input type="submit" value="Save" class="btn btn-success"></br>   </form>
   </div>
 </div></div>

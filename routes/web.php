@@ -30,14 +30,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::put('/driver/{driverId}/schedules/index', [ScheduleController::class, 'index'])->name('schedules.index');
-Route::get('/calendar/{driverId}', [ScheduleController::class, 'calendar'])->name('schedules.calendar');
+Route::get('/driver/{driverId}/schedules/index', [ScheduleController::class, 'index'])->name('schedules.index');
+
 
 Route::get('/driver/{driverId}/schedules/create', [ScheduleController::class, 'create'])->name('schedules.create');
 Route::post('/driver/{driverId}/schedules', [ScheduleController::class, 'store'])->name('schedules.store');
 Route::get('/driver/{driverId}/schedules/{scheduleId}/edit', [ScheduleController::class, 'edit'])->name('schedules.edit');
-Route::put('/driver/{driverId}/schedules/{scheduleId}', [ScheduleController::class, 'update'])->name('schedules.update');
-Route::delete('/driver/{driverId}/schedules/{scheduleId}', [ScheduleController::class, 'destroy'])->name('schedules.destroy');
+Route::patch('/driver/{driverId}/schedules/{scheduleId}', [ScheduleController::class, 'update'])->name('schedules.update');
+
+
+
+Route::delete('schedules/{scheduleId}/delete', [ScheduleController::class, 'destroy'])->name('schedules.destroy');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -62,7 +65,7 @@ Route::post('/profile', [UserController::class, 'update_avatar']);
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
-    Route::resource('driver' , DriversTimetableController::class);
+    Route::resource('driver', DriversTimetableController::class)->names('driver');
     Route::resource('permissions', PermissionController::class);
     Route::resource('course', CourseController::class);
     Route::resource('exports', ExportController::class);

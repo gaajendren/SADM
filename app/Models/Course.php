@@ -26,7 +26,8 @@ class Course extends Model
      'send_date',
      'eco',
      'back_date',
-     'trailer'];
+     'trailer',
+    'status'];
 
     public $sortable = ['date',
     'cn',
@@ -42,7 +43,8 @@ class Course extends Model
      'send_date',
      'eco',
      'back_date',
-     'trailer'];
+     'trailer',
+     'status'];
     
     
     

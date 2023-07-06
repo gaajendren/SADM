@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Course</h1>
+          <h1 class="m-0">Export</h1>
         </div><!-- /.col -->
         <div class="col-sm-10">
           <ol class="breadcrumb float-sm-right">
@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Course</div>
+                    <div class="card-header">Export</div>
                     <div class="card-body">
                         <a href="{{ url('/exports/create') }}" class="btn btn-success btn-sm" title="Add New Course">
                        
@@ -67,6 +67,7 @@
         <th>Send Date</th>
         <th>Back Date</th>
         <th>Trailer</th>
+        <th>Status</th>
         <th>Actions</th>
     </tr>
 </thead>
@@ -92,6 +93,9 @@
         <td>{{ $item->send_date }}</td>
         <td>{{ $item->back_date }}</td>
         <td>{{ $item->trailer }}</td>
+        <td> <div class="action-buttons d-flex">
+            <button class="btn btn-sm {{ $item->status === 'Pending' ? 'btn-warning' : ($item->status === 'On the Way' ? 'btn-info' : 'btn-success') }}">{{ $item->status }}</button>
+        </div></td>
                                                
                                         <td>
                                         <div class="action-buttons d-flex">

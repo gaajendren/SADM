@@ -30,6 +30,7 @@ class CreateImportTable extends Migration
             $table->string('eco')->nullable();
             $table->string('back_date')->nullable();
             $table->string('trailer')->nullable();
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

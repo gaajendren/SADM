@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style = "position:fixed; height: 100%"  >
 
 <a href="/home" class="brand-link">
-      <img src="../../dist/img/sadmPic2.png" alt="AdminLTE Logo" class="brand-image " style="position:fixed;">
+      <img src="../../../../../../../../../../dist/img/sadmPic2.png" alt="AdminLTE Logo" class="brand-image " style="position:fixed;">
       <br>
     </a>
   
@@ -10,7 +10,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
+          <img src="../../../../../../../../dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="/profile" class="d-block">

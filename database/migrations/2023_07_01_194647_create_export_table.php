@@ -35,6 +35,7 @@ class CreateExportTable extends Migration
             $table->char('send_date');
             $table->char('back_date');
             $table->char('trailer');
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

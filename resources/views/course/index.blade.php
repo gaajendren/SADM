@@ -4,8 +4,21 @@
 <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
 <script src="https://kit.fontawesome.com/bc8e231302.js" crossorigin="anonymous"></script>
+<style>
+.course-item {
+    margin-bottom: 20px;
+}
 
+.status-buttons {
+    display: flex;
+    justify-content: center;
+}
 
+.status-buttons button {
+    margin-right: 10px;
+}
+
+</style>
 <!-- Main Sidebar Container -->
 @include('layouts.sidebar')
 
@@ -17,7 +30,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Course</h1>
+          <h1 class="m-0">Import</h1>
         </div><!-- /.col -->
         <div class="col-sm-10">
           <ol class="breadcrumb float-sm-right">
@@ -33,7 +46,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Course</div>
+                    <div class="card-header">Import</div>
                     <div class="card-body">
                         <a href="{{ url('/course/create') }}" class="btn btn-success btn-sm" title="Add New Course">
                        
@@ -63,6 +76,7 @@
                                     <th>ECO Depot</th>
                                     <th>Back Date</th>
                                     <th>Trailer</th>
+                                    <th>Status</th>
 
                     
                                         <th>Actions</th>
@@ -87,13 +101,16 @@
                                          <td>{{$item->eco}}</td> 
                                           <td>{{$item->back_date}}</td>  
                                          <td>{{$item->trailer}}</td>
+                                         <td> <div class="action-buttons d-flex">
+            <button class="btn btn-sm {{ $item->status === 'Pending' ? 'btn-warning' : ($item->status === 'On the Way' ? 'btn-info' : 'btn-success') }}">{{ $item->status }}</button>
+        </div></td>
                                           
                                                
                                         <td>
                                         <div class="action-buttons d-flex">
 
                  <a href="{{ url('/course/' . $item->id . '/pdf') }}" title="Export pdf" class="mr-2">
-                    <button class="btn btn-info btn-sm">
+                    <button class="btn btn-warning btn-sm">
                         <i class="fa fa-eye" aria-hidden="true"></i> Pdf
                     </button>
                 </a>

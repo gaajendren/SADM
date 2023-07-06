@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Course</h1>
+          <h1 class="m-0">Export</h1>
         </div><!-- /.col -->
         <div class="col-sm-10">
           <ol class="breadcrumb float-sm-right">
@@ -28,7 +28,7 @@
   <!-- /.content-header -->
   <div class="container" style= "margin: left 50;">
 <div class="card">
-  <div class="card-header">Course View Page
+  <div class="card-header">Export View Page
   <span class="float-right">
                     <a class="btn btn-primary" href="{{ url('/course') }}">Back</a>
                 </span>
@@ -57,6 +57,8 @@
 <h5 class="card-text">Send Date: {{ $courseview->send_date }}</h5>
 <h5 class="card-text">Back Date: {{ $courseview->back_date }}</h5>
 <h5 class="card-text">Trailer: {{ $courseview->trailer }}</h5>
+<h5 class="card-text">Status: <button class="btn btn-sm {{ $courseview->status === 'Pending' ? 'btn-warning' : ($courseview->status === 'On the Way' ? 'btn-info' : 'btn-success') }}">{{ $courseview->status }}</button>        </div></td>
+</h5>
   </div>
       
     </hr>

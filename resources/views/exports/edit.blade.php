@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Course</h1>
+          <h1 class="m-0">Export</h1>
         </div><!-- /.col -->
         <div class="col-sm-10">
           <ol class="breadcrumb float-sm-right">
@@ -29,7 +29,7 @@
   <div class="container" style= "margin: left 50;">
 <div class="card">
   
-  <div class="card-header">Course Edit Page
+  <div class="card-header">Export Edit Page
   <span class="float-right">
                     <a class="btn btn-primary" href="{{ url('/exports') }}">Back</a>
                 </span>
@@ -113,7 +113,14 @@
     <strong>Trailer:</strong>
     {!! Form::text('trailer', null, ['placeholder' => 'Trailer', 'class' => 'form-control']) !!}
 </div>
-       
+<div class="form-group">
+    <label for="status">Status:</label>
+    <select class="form-control" id="status" name="status">
+        <option value="Pending" {{ $course->status === 'Pending' ? 'selected' : '' }}>Pending</option>
+        <option value="On the Way" {{ $course->status === 'On the Way' ? 'selected' : '' }}>On the Way</option>
+        <option value="Delivered" {{ $course->status === 'Delivered' ? 'selected' : '' }}>Delivered</option>
+    </select>
+</div>
        
 <button type="submit" class="btn btn-primary">Submit</button>
 
