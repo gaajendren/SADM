@@ -91,6 +91,12 @@
                                                
                                         <td>
                                         <div class="action-buttons d-flex">
+
+                 <a href="{{ url('/course/' . $item->id . '/pdf') }}" title="Export pdf" class="mr-2">
+                    <button class="btn btn-info btn-sm">
+                        <i class="fa fa-eye" aria-hidden="true"></i> Pdf
+                    </button>
+                </a>
                 <a href="{{ url('/course/' . $item->id) }}" title="View Course" class="mr-2">
                     <button class="btn btn-info btn-sm">
                         <i class="fa fa-eye" aria-hidden="true"></i> View

@@ -10,7 +10,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
+          <img src="dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="/profile" class="d-block">
@@ -115,7 +115,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item" style = "position:relative; left:15px;">
-                <a href="{{ url('/course') }}" class="nav-link">
+                <a href="{{ url('/exports') }}" class="nav-link">
                 <i class="nav-icon fa-solid fa-list"></i>
                   <p>List</p>
                 </a>
@@ -132,9 +132,9 @@
            </li>
            </li>
            <li class="nav-item">
-                <a href="{{ url('/campus') }}" class="nav-link">
+                <a href="{{ url('/driver') }}" class="nav-link">
                 <i class="nav-icon fa-solid fa-list"></i>
-                  <p>Campus</p>
+                  <p>driver</p>
                 </a>
               </li>
            </li>

@@ -13,7 +13,7 @@ class CoursesExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
 {
     public function collection()
     {
-        return Course::all();
+        return Course::all()->except(['created_at', 'updated_at']);
     }
 
     public function headings(): array
