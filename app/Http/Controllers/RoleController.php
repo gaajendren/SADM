@@ -63,7 +63,8 @@ class RoleController extends Controller
 
         $permission5 = Permission:: groupBy('id') -> having('id', '>' , 16) -> having('id', '<=', 20) -> get();
 
-        return view('roles.create', compact('permission','permission1', 'permission2','permission3','permission4','permission5'));
+        $permission6 = Permission:: groupBy('id') -> having('id', '>' , 22) -> having('id', '<=', 25) -> get();
+        return view('roles.create', compact('permission','permission1', 'permission2','permission3','permission4','permission5', 'permission6'));
     }
 
     /**

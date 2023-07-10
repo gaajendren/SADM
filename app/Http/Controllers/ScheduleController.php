@@ -71,6 +71,9 @@ public function store(Request $request )
     $schedule->date = $request->input('date');
     $schedule->start_time = $request->input('start_time');
     $schedule->end_time = $request->input('end_time');
+    $schedule->type = $request->input('type');
+    $schedule->type_id = $request->input('type_id');
+  
     // Set other schedule fields as needed
     $schedule->save();
 

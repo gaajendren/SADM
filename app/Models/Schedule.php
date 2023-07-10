@@ -12,6 +12,8 @@ class Schedule extends Model
         'date',
         'start_time',
         'end_time',
+        'type',
+        'type_id',
         // Add other schedule fields here
     ];
 

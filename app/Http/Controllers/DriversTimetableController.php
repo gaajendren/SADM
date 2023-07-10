@@ -16,10 +16,10 @@ class DriversTimetableController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:import-list|import-create|import-edit|import-delete', ['only' => ['index','store']]);
-        $this->middleware('permission:import-create', ['only' => ['create','store']]);
-        $this->middleware('permission:import-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:import-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:driver-list|driver-create|driver-edit|import-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:driver-create', ['only' => ['create','store']]);
+        $this->middleware('permission:driver-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:driver-delete', ['only' => ['destroy']]);
     }
 
 

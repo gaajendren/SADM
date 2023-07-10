@@ -48,6 +48,7 @@
                             <table id="ListCourse" class="table">
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                     <th>Date</th>
         <th>CN</th>
         <th>Booking</th>
@@ -74,6 +75,7 @@
 <tbody>
     @foreach($course as $item)
     <tr>
+    <td>{{$item->id}}</td>
         <td>{{ $item->date }}</td>
         <td>{{ $item->cn }}</td>
         <td>{{ $item->booking }}</td>

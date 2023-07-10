@@ -49,6 +49,16 @@
         <strong>End Time:</strong>
         {!! Form::time('end_time', null, ['class' => 'form-control']) !!}
     </div>
+
+    <div class="form-group">
+    <strong>Type of Delivery:</strong>
+    {!! Form::select('type', ['import' => 'Import', 'export' => 'Export'], null, ['class' => 'form-control']) !!}
+</div>
+<div class="form-group">
+    <strong>ID:</strong>
+    {!! Form::text('type_id', null, ['class' => 'form-control']) !!}
+</div>
+
     <!-- Add other fields related to the schedule as needed -->
     {!! Form::submit('Add Schedule', ['class' => 'btn btn-primary']) !!}
     {!! Form::close() !!}

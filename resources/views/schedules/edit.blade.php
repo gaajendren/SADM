@@ -50,6 +50,14 @@
         <strong>End Time:</strong>
         {!! Form::time('end_time', $schedule->end_time, ['class' => 'form-control']) !!}
     </div>
+    <div class="form-group">
+    <strong>Type of Delivery:</strong>
+    {!! Form::select('type', ['import' => 'Import', 'export' => 'Export'], null, ['class' => 'form-control']) !!}
+</div>
+<div class="form-group">
+    <strong>ID:</strong>
+    {!! Form::text('type_id', null, ['class' => 'form-control']) !!}
+</div>
     
 <button type="submit" class="btn btn-primary">Submit</button>
 

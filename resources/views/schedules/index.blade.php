@@ -52,6 +52,8 @@
                    
                     <th>Date</th>
                     <th>Duration</th>
+                    <th>Type Delivery</th>
+                    <th>ID Type</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -61,6 +63,8 @@
                      
                         <td>{{ $schedule->date }}</td>
                         <td> {{ $schedule->start_time }} - {{ $schedule->end_time }}</td>
+                        <td> {{ $schedule->type }}</td>
+                        <td> {{ $schedule->type_id }}</td>
                         <!-- Display other schedule fields here -->
                         <td>
                         <div class="action-buttons d-flex">
